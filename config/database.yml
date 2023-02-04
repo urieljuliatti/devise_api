@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: devise_api_development
+
+test:
+  <<: *default
+  database: devise_api_test
+
+production:
+  <<: *default
+  database: devise_api_production
+  username: devise_api
+  password: <%= ENV['DEVISE_API_DATABASE_PASSWORD'] %>
