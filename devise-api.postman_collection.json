@@ -91,7 +91,7 @@
 					"response": []
 				},
 				{
-					"name": "User Validate",
+					"name": "User Validate Token",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -205,6 +205,45 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "User Update E-mail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "{{access-token\n}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"uriel@email.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAuthURL}}",
+							"host": [
+								"{{baseAuthURL}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -301,7 +340,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "// Header info From the email URL\n{\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}",
+							"raw": "// Header info From the email URL (Forget Password)\n{\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
