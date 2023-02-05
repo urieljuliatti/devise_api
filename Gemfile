@@ -10,10 +10,13 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors', '~> 1.1'
 gem 'rails', '~> 6.1.3'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 3.1'
+  gem 'rspec-rails', '~> 6.0'
 end
 
 group :development do
@@ -22,4 +25,8 @@ group :development do
   gem 'spring'
 end
 
-gem "rspec-rails", "~> 6.0", :groups => [:development, :test]
+group :test do
+  gem 'database_cleaner-active_record', '~> 2.0'
+  gem 'shoulda-matchers', '~> 5.3'
+  gem 'simplecov', '~> 0.22.0', require: false
+end
