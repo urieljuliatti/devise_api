@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"uriel.juliattivalle@gmail.com\",\n    \"password\": \"12345678\"\n    \n}",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"12345678\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -414,7 +414,23 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{baseURL}}articles",
 					"host": [
@@ -439,6 +455,21 @@
 					{
 						"key": "Accept",
 						"value": "application/vnd.devise_api.v1",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
 						"type": "text"
 					}
 				],
@@ -465,6 +496,21 @@
 						"key": "Accept",
 						"value": "application/vnd.devise_api.v2",
 						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
 					}
 				],
 				"url": {
@@ -485,7 +531,23 @@
 			"name": "Update Article",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"title\": \"Hello 2\",\n    \"body\": \"Outro Versionamento\"\n}",
@@ -514,9 +576,25 @@
 			"name": "Delete Article",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost:3000/api/articles/4",
+					"raw": "localhost:3000/api/articles/6",
 					"host": [
 						"localhost"
 					],
@@ -524,7 +602,7 @@
 					"path": [
 						"api",
 						"articles",
-						"4"
+						"6"
 					]
 				}
 			},
@@ -534,9 +612,25 @@
 			"name": "Get Article",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost:3000/api/articles/1",
+					"raw": "localhost:3000/api/articles/7",
 					"host": [
 						"localhost"
 					],
@@ -544,7 +638,7 @@
 					"path": [
 						"api",
 						"articles",
-						"1"
+						"7"
 					]
 				}
 			},
@@ -554,10 +648,26 @@
 			"name": "Create Article",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "access-token",
+						"value": "{{access-token\n}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Artigo 5\",\n    \"body\": \"Artigão em body\"\n}",
+					"raw": "{\n    \"title\": \"Artigo\",\n    \"body\": \"Artigão em body\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
