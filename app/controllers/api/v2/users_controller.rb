@@ -10,6 +10,17 @@ class Api::V2::UsersController < ApplicationController
     render json: @users
   end
 
+  def create
+    @user = User.new(user_params)
+    @user.password = params[:password]
+    @user.password_confirmation = params[:password_confirmation]
+    if @user.save
+      render json: @user, status: :created, location: api_user_confirmation_url({ email: @user.email })
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
   def show
     render json: @user
   end
