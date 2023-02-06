@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::V1::ArticlesController < ApplicationController
   before_action :authenticate_api_user!
   before_action :set_article, only: [:show, :update, :destroy]
@@ -40,13 +42,14 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = current_api_user.articles.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = current_api_user.articles.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end
