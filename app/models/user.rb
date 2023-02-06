@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
          :registerable,
-         :recoverable, 
-         :rememberable, 
+         :recoverable,
+         :rememberable,
          :validatable,
          :confirmable,
          :trackable
@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
   has_many :articles, dependent: :destroy
 
   before_validation :set_uid
+
+  def admin?
+    admin.eql?(true) unless admin.blank?
+  end
 
   private
 
