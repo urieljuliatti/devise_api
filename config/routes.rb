@@ -15,8 +15,7 @@ Rails.application.routes.draw do
     scope module: :v2,
           constraints: ApiConstraints.new(version: 2, default: true) do
       resources :articles
-      get 'users', to: 'users#index'
-      get 'user/:id', to: 'users#show'
+      resources :users
     end
   end
 end
