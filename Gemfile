@@ -19,14 +19,14 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0'
 end
 
-group :development do
-  gem 'letter_opener'
-  gem 'listen', '~> 3.3'
-  gem 'spring'
-end
-
 group :test do
   gem 'database_cleaner-active_record', '~> 2.0'
   gem 'shoulda-matchers', '~> 5.3'
   gem 'simplecov', '~> 0.22.0', require: false
+end
+
+group :development do
+  gem 'letter_opener'
+  gem 'listen', '~> 3.3'
+  gem 'spring'
 end
