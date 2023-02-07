@@ -2,7 +2,7 @@
 
 # Welcome to devise_api 😄
 
-This project is a personal challenge that I developed in order to learn and to deal with the authentication library [devise_token_auth](https://github.com/lynndylanhurley/devise_token_auth). Remembering that the application was not configured for production and is intended only for development mode. Any further details can be found at
+This project is a personal challenge that I developed in order to learn and to deal with the authentication library [devise_token_auth](https://github.com/lynndylanhurley/devise_token_auth). Remembering that the application was not configured for production and is intended only for development mode. Any further details can be found at [Devise Token Auth Official Documentation](https://devise-token-auth.gitbook.io/devise-token-auth/usage)
 
 <table>
   <tr>
